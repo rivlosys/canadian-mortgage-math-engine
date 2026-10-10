@@ -1,0 +1,28 @@
+{
+  "name": "canadian-mortgage-math-engine",
+  "version": "1.0.0",
+  "description": "Open-source reference and TypeScript engine for Canadian mortgage qualification, OSFI B-20 stress-test, and semi-annual compounding math.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "node --test test.js",
+    "build": "tsc"
+  },
+  "keywords": [
+    "canada",
+    "mortgage",
+    "calculator",
+    "osfi",
+    "b20",
+    "stress-test",
+    "fintech",
+    "semi-annual-compounding",
+    "interest-act"
+  ],
+  "author": "UseCOS Research & Engineering (https://usecos.app)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rivlosys/canadian-mortgage-math-engine"
+  }
+}
