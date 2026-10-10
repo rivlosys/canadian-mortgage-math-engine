@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software or its mathematical specifications, please cite it as below."
+authors:
+  - name: "UseCOS Engineering"
+    website: "https://usecos.app"
+title: "Canadian Mortgage Math Engine: Section 6 Interest Act & OSFI B-20 Reference Implementation"
+version: 1.0.0
+date-released: 2026-10-09
+url: "https://github.com/rivlosys/canadian-mortgage-math-engine"
+repository-code: "https://github.com/rivlosys/canadian-mortgage-math-engine"
+keywords:
+  - "canadian mortgage"
+  - "semi-annual compounding"
+  - "interest act canada"
+  - "osfi b-20"
+  - "stress test"
+  - "fintech"
+license: "MIT"
