@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+[![Live Repo](https://img.shields.io/badge/GitHub-rivlosys%2Fcanadian--mortgage--math--engine-blue?logo=github)](https://github.com/rivlosys/canadian-mortgage-math-engine)
 [![Interactive Calculators](https://img.shields.io/badge/Live%20Demo-UseCOS-success)](https://usecos.app/mortgage)
 
 > An open-source reference, mathematical specification, and TypeScript implementation of official Canadian lending, mortgage qualification, and taxation formulas. Includes Bank of Canada / OSFI B-20 stress-test rules, semi-annual compounding equations, GDS/TDS limits, and provincial tax brackets.
@@ -13,6 +14,18 @@
 Most mortgage and finance calculators on the internet default to **US lending standards** (monthly compounding). In Canada, federal lending laws mandate **semi-annual compounding** for fixed-rate mortgages, and OSFI B-20 enforces strict qualifying stress tests.
 
 Using US formulas for Canadian mortgages causes errors in amortization schedules, payment amounts, and debt-service ratios. This repository serves as the transparent, open-source mathematical reference for developers, financial analysts, and mortgage professionals.
+
+### 🚨 The Hidden $4,479 Calculation Error
+
+Here is what happens when software calculates a typical Canadian home loan using standard US monthly compounding instead of statutory Canadian compounding:
+
+| Scenario: $500,000 Loan @ 5.00% (25-Yr Amortization) | US Monthly Compounding (Default Web Code) | Canadian Semi-Annual Compounding (*Interest Act* Legal) | Discrepancy / Phantom Error |
+| :--- | :--- | :--- | :--- |
+| **Monthly Payment** | **$2,922.95** | **$2,908.02** | **+$14.93 / month** |
+| **Total Paid (25 Years)** | **$876,885.00** | **$872,406.00** | **+$4,479.00 CAD** |
+| **Total Interest Paid** | **$376,885.00** | **$372,406.00** | **+$4,479.00 CAD** |
+
+A difference of **$14.93/month** might seem negligible, but over a standard 25-year amortization it miscalculates mortgage debt by nearly **$4,500 CAD**. Using American mortgage math on Canadian loans distorts debt-service calculations, misleads borrowers comparing bank offers, and miscalculates qualification thresholds.
 
 > **Need an interactive browser tool?**
 > Test these formulas with visual charts and amortization schedules on [UseCOS Canadian Mortgage Calculator](https://usecos.app/mortgage) and the [Mortgage Renewal Offer Analyzer](https://usecos.app/mortgage/renewal-offer-analyzer).
